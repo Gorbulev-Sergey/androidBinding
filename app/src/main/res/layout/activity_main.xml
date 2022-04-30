@@ -17,13 +17,20 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={mainViewModel.text}"/>
+
         <TextView
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{mainViewModel.title}" />
+            android:text="@{mainViewModel.title +' '+ mainViewModel.text}" />
 
         <Button
-            android:id="@+id/buttonText"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{(v)->mainViewModel.buttonOnClick(v)}"
