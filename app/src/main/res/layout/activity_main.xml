@@ -13,21 +13,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:padding="20dp"
         tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{mainViewModel.title +' '+ mainViewModel.text}" />
 
         <EditText
             android:id="@+id/edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@={mainViewModel.text}"/>
-
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{mainViewModel.title +' '+ mainViewModel.text}" />
 
         <Button
             android:id="@+id/button"
